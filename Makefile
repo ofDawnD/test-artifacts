@@ -1,9 +1,11 @@
 all:
- 	mkdir -p bin
-	cc main.cc -o bin/helloworld
+	mkdir -p bin
+	clang++ main.cc -O3 -o bin/helloworld-release
+	clang++ main.cc -g -o bin/helloworld-debug
 
 check:
-	./bin/helloworld
+	./bin/helloworld-release
+	./bin/helloworld-debug
 
 distcheck:
 	pwd
